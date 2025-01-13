@@ -1,0 +1,144 @@
+/* Updated styles */
+.horizontal-gallery {
+    margin-top: 80px; /* Adjust this value according to your header's height */
+    padding: 20px;
+    background-color: black;
+}
+
+/* Existing styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    flex-direction: row;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.menu-toggle {
+    display: flex;
+    cursor: pointer;
+    margin-right: 20px;
+    flex-direction: column;
+}
+
+.menu-toggle span {
+    background-color: white;
+    height: 4px;
+    width: 30px;
+    margin: 5px 0;
+}
+
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Transparent black */
+    z-index: 1000; /* Ensure it's above everything */
+    display: none; /* Hidden by default */
+}
+
+.overlay-menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay-content a {
+    font-size: 36px;
+    color: white;
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+}
+
+.overlay-content a.active {
+    color: #b22222;
+}
+
+.overlay-content a:hover {
+    color: #b22222;
+}
+
+.social-icons {
+    margin-top: 30px;
+    display: flex; /* Align items horizontally */    justify-content: center; /* Center the icons horizontally */    gap: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}
+
+.vertical-gallery {
+    margin-top: 100px; /* To account for the fixed header */
+    overflow-y: auto;
+    padding-top: 100%;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.image-container {
+    display: block;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 100%;  /* Full width of the container */
+    height: auto; /* Automatic height */
+    object-fit: cover;
+    margin-bottom: 20px;  /* Space between images */
+    border-radius: 8px;
+}
+
+/* Scroll bar styling */
+.vertical-gallery::-webkit-scrollbar {
+    width: 8px;
+}
+
+.vertical-gallery::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.vertical-gallery::-webkit-scrollbar-track {
+    background-color: #f8f8f8;
+}
